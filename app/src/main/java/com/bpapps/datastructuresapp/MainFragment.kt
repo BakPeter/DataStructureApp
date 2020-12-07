@@ -90,6 +90,8 @@ class MainFragment : Fragment() {
             Log.d(TAG, "pushToHead(5) : ${list.pushToHead(5)}")
             Log.d(TAG, "pushToHead(6) : ${list.pushToHead(6)}")
             Log.d(TAG, "pushToHead(7) : ${list.pushToHead(7)}")
+            Log.d(TAG, "pushToHead(8) : ${list.pushToHead(8)}")
+            Log.d(TAG, "pushToHead(9) : ${list.pushToHead(9)}")
 
 //            Log.d(TAG, "get(-1) : ${list.get(-1)}")
 //            Log.d(TAG, "get(100) : ${list.get(100)}")
@@ -111,26 +113,57 @@ class MainFragment : Fragment() {
 //            Log.d(TAG, "set(3, 333333) : ${list.set(3, 333333)}")
 //            Log.d(TAG, "$list")
 
-            Log.d(TAG, "insert(-1, 100) : ${list.insert(-1, 100)}")
-            Log.d(TAG, list.toString())
+//            Log.d(TAG, "insert(-1, 100) : ${list.insert(-1, 100)}")
+//            Log.d(TAG, list.toString())
+//
+//            Log.d(TAG, "insert(100, 100) : ${list.insert(100, 100)}")
+//            Log.d(TAG, list.toString())
+//
+//            Log.d(TAG, "insert(0, 100) : ${list.insert(0, 100)}")
+//            Log.d(TAG, list.toString())
+//
+//            Log.d(TAG, "insert(list.length, 100) : ${list.insert(list.length, 100)}")
+//            Log.d(TAG, list.toString())
+//
+//            Log.d(TAG, "insert(list.length - 1, 100) : ${list.insert(list.length - 1, 100)}")
+//            Log.d(TAG, list.toString())
+//
+//            Log.d(TAG, "insert(3, 400) : ${list.insert(3, 400)}")
+//            Log.d(TAG, list.toString())
+//
+//            Log.d(TAG, "insert(6, 600) : ${list.insert(6, 600)}")
+//            Log.d(TAG, list.toString())
 
-            Log.d(TAG, "insert(100, 100) : ${list.insert(100, 100)}")
-            Log.d(TAG, list.toString())
+//            Log.d(TAG, "==============")
+//            Log.d(TAG, list.toString())
+//            Log.d(TAG, "===========================================")
+//            Log.d(TAG, "list.remove(-1) : ${list.remove(-1)}")
+//            Log.d(TAG, list.toString())
+//            Log.d(TAG, "===========================================")
+//
+//            Log.d(TAG, "list.remove(100) : ${list.remove(100)}")
+//            Log.d(TAG, list.toString())
+//            Log.d(TAG, "===========================================")
+//
+//            Log.d(TAG, "list.remove(0) : ${list.remove(0)}")
+//            Log.d(TAG, list.toString())
+//            Log.d(TAG, "===========================================")
+//
+//            Log.d(TAG, "list.remove(list.length - 1) : ${list.remove(list.length - 1)}")
+//            Log.d(TAG, list.toString())
+//            Log.d(TAG, "===========================================")
+//
+//            Log.d(TAG, "list.remove(2) : ${list.remove(2)}")
+//            Log.d(TAG, list.toString())
+//            Log.d(TAG, "===========================================")
+//
+//            Log.d(TAG, "list.remove(3) : ${list.remove(3)}")
+//            Log.d(TAG, list.toString())
+//            Log.d(TAG, "===========================================")
 
-            Log.d(TAG, "insert(0, 100) : ${list.insert(0, 100)}")
             Log.d(TAG, list.toString())
+            Log.d(TAG, list.reverse()?.toString())
 
-            Log.d(TAG, "insert(list.length, 100) : ${list.insert(list.length, 100)}")
-            Log.d(TAG, list.toString())
-
-            Log.d(TAG, "insert(list.length - 1, 100) : ${list.insert(list.length - 1, 100)}")
-            Log.d(TAG, list.toString())
-
-            Log.d(TAG, "insert(3, 400) : ${list.insert(3, 400)}")
-            Log.d(TAG, list.toString())
-
-            Log.d(TAG, "insert(6, 600) : ${list.insert(6, 600)}")
-            Log.d(TAG, list.toString())
             val x = 1
 
             //chapter 19

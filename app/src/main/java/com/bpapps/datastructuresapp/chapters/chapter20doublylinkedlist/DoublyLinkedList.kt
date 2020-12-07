@@ -1,11 +1,57 @@
 package com.bpapps.datastructuresapp.chapters.chapter20doublylinkedlist
 
+import android.util.Log
+
 class DoublyLinkedList<T> {
     private var head: Node<T>? = null
     private var tail: Node<T>? = null
 
     var length: Int = 0
         private set
+
+    fun reverse(): DoublyLinkedList<T> {
+        if (head != null) {
+            var curr = head
+            head = tail
+            tail = curr
+
+            var next: Node<T>? = null
+            var prev: Node<T>? = null
+            if (length > 1) {
+                while (curr != null) {
+                    next = curr.next
+                    prev = curr!!.prev
+                    curr.prev = curr.next
+                    curr.next = prev
+
+                    curr = next
+                }
+            }
+        }
+
+        return this
+    }
+
+    fun remove(ind: Int): T? {
+        if (ind < 0 || ind > length - 1) return null
+        if (ind == 0) return popFromHead()
+        if (ind == length - 1) return popFromTail()
+
+        val nodeToRemove = getNode(ind)
+
+        Log.d(TAG, nodeToRemove.toString())
+
+        val prev = nodeToRemove!!.prev
+        val next = nodeToRemove.next
+        prev!!.next = next
+        next!!.prev = prev
+//        nodeToRemove!!.prev = nodeToRemove.next
+//        nodeToRemove.next!!.prev = nodeToRemove.prev
+
+        length--
+
+        return nodeToRemove.data
+    }
 
     fun insert(ind: Int, data: T): Boolean {
         if (ind < 0 || ind > length - 1) return false
@@ -160,5 +206,13 @@ class DoublyLinkedList<T> {
     }
 
 
-    data class Node<T>(var data: T, var prev: Node<T>? = null, var next: Node<T>? = null)
+    companion object {
+        private const val TAG = "TAG.DoublyLinkedList"
+    }
+
+    data class Node<T>(var data: T, var prev: Node<T>? = null, var next: Node<T>? = null) {
+        override fun toString(): String {
+            return "Node[data=${data}, prev=${prev?.data}, next=${next?.data} ]"
+        }
+    }
 }
