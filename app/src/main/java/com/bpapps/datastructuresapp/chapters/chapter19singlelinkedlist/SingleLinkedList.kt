@@ -1,14 +1,10 @@
 package com.bpapps.datastructuresapp.chapters.chapter19singlelinkedlist
 
-import java.lang.StringBuilder
-
 class SingleLinkedList<T> {
 
-    var head: Node<T>? = null
-        private set
+    private var head: Node<T>? = null
 
-    var tail: Node<T>? = null
-        private set
+    private var tail: Node<T>? = null
 
     var length: Int = 0
         private set
@@ -20,7 +16,7 @@ class SingleLinkedList<T> {
 
         var next: Node<T>?
         var prev: Node<T>? = null
-        while(curr != null) {
+        while (curr != null) {
             next = curr.next
             curr.next = prev
             prev = curr
