@@ -6,7 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.bpapps.datastructuresapp.chapters.chapter20doublylinkedlist.DoublyLinkedList
+import com.bpapps.datastructuresapp.chapters.chapter22binarysearchtrees.BinarySearchTree
+import com.bpapps.datastructuresapp.chapters.chapter23treetraversal.TreeUtils
 import kotlinx.android.synthetic.main.fragment_main.*
 
 // TODO: Rename parameter arguments, choose names that match
@@ -14,11 +15,6 @@ import kotlinx.android.synthetic.main.fragment_main.*
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [MainFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class MainFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
@@ -53,12 +49,85 @@ class MainFragment : Fragment() {
         btnRunFuncs.setOnClickListener {
             //===============================================================
             //===============================================================
+            //chapter22
+            val tree = TreeUtils<Int>()
+            tree.insert(10)
+            tree.insert(6)
+            tree.insert(15)
+            tree.insert(3)
+            tree.insert(8)
+            tree.insert(20)
+
+//            Log.d(TAG, "${tree.find(10)}")
+//            Log.d(TAG, "${tree.find(6)}")
+//            Log.d(TAG, "${tree.find(15)}")
+//            Log.d(TAG, "${tree.find(3)}")
+//            Log.d(TAG, "${tree.find(8)}")
+//            Log.d(TAG, "${tree.find(20)}")
+
+            Log.d(TAG, "tree.BFS() : ${tree.BFS()}")
+            Log.d(TAG, "tree.DFSPreOrder() : ${tree.DFSPreOrder()}")
+            Log.d(TAG, "tree.DFSPostOrder() : ${tree.DFSPostOrder()}")
+            Log.d(TAG, "tree.DFSInOrder() : ${tree.DFSInOrder()}")
+
+            val x = 1
+
+            //chapter 21
+//            val stack: MyStackList<String> = MyStackList()
+//            Log.d(TAG, stack.toString())
+//            Log.d(TAG, "stack.push(str1111) : ${stack.push("str1111")}")
+//            Log.d(TAG, "stack.push(str2222) : ${stack.push("str2222")}")
+//            Log.d(TAG, "stack.push(str3333) : ${stack.push("str3333")}")
+//            Log.d(TAG, "stack.push(str4444) : ${stack.push("str4444")}")
+//            Log.d(TAG, stack.toString())
+//            Log.d(TAG,"stack.pop() : ${stack.pop()}")
+//            Log.d(TAG, stack.toString())
+//
+//            Log.d(TAG,"stack.pop() : ${stack.pop()}")
+//            Log.d(TAG, stack.toString())
+//
+//            Log.d(TAG,"stack.pop() : ${stack.pop()}")
+//            Log.d(TAG, stack.toString())
+//
+//            Log.d(TAG,"stack.pop() : ${stack.pop()}")
+//            Log.d(TAG, stack.toString())
+//
+//            Log.d(TAG,"stack.pop() : ${stack.pop()}")
+//            Log.d(TAG, stack.toString())
+//            val queue = MyQueueList<Double>()
+//            Log.d(TAG, queue.toString())
+//
+//            Log.d(TAG, "queue.endQueue(11.11) : ${queue.endQueue(11.11)}")
+//            Log.d(TAG, queue.toString())
+//
+//            Log.d(TAG, "queue.endQueue(22.22) : ${queue.endQueue(22.22)}")
+//            Log.d(TAG, queue.toString())
+//
+//            Log.d(TAG, "queue.endQueue(33.33) : ${queue.endQueue(33.33)}")
+//            Log.d(TAG, queue.toString())
+//
+//            Log.d(TAG, "queue.deQueue() : ${queue.deQueue()}")
+//            Log.d(TAG, queue.toString())
+//
+//            Log.d(TAG, "queue.deQueue() : ${queue.deQueue()}")
+//            Log.d(TAG, queue.toString())
+//
+//            Log.d(TAG, "queue.deQueue() : ${queue.deQueue()}")
+//            Log.d(TAG, queue.toString())
+//
+//            Log.d(TAG, "queue.deQueue() : ${queue.deQueue()}")
+//            Log.d(TAG, queue.toString())
+//
+//            Log.d(TAG, "queue.deQueue() : ${queue.deQueue()}")
+//            Log.d(TAG, queue.toString())
+//
             //chapter 20
-            val list = DoublyLinkedList<Int>()
+//            val list = DoublyLinkedList<Int>()
 //            Log.d(TAG, "pushToTheEnd(1) : ${list.pushToEnd(1)}")
 //            Log.d(TAG, "pushToTheEnd(2) : ${list.pushToEnd(2)}")
 //            Log.d(TAG, "pushToTheEnd(3) : ${list.pushToEnd(3)}")
 //            Log.d(TAG, "pushToTheEnd(4) : ${list.pushToEnd(4)}")
+
 //            Log.d(TAG, "pushToTheEnd(5) : ${list.pushToEnd(5)}")
 //            Log.d(TAG, "pushToTheEnd(6) : ${list.pushToEnd(6)}")
 //            Log.d(TAG, "pushToTheEnd(7) : ${list.pushToEnd(7)}")
@@ -83,15 +152,15 @@ class MainFragment : Fragment() {
 
 //            Log.d(TAG, "get(5) : ${list.get(5)}")
 
-            Log.d(TAG, "pushToHead(1) : ${list.pushToHead(1)}")
-            Log.d(TAG, "pushToHead(2) : ${list.pushToHead(2)}")
-            Log.d(TAG, "pushToHead(3) : ${list.pushToHead(3)}")
-            Log.d(TAG, "pushToHead(4) : ${list.pushToHead(4)}")
-            Log.d(TAG, "pushToHead(5) : ${list.pushToHead(5)}")
-            Log.d(TAG, "pushToHead(6) : ${list.pushToHead(6)}")
-            Log.d(TAG, "pushToHead(7) : ${list.pushToHead(7)}")
-            Log.d(TAG, "pushToHead(8) : ${list.pushToHead(8)}")
-            Log.d(TAG, "pushToHead(9) : ${list.pushToHead(9)}")
+//            Log.d(TAG, "pushToHead(1) : ${list.pushToHead(1)}")
+//            Log.d(TAG, "pushToHead(2) : ${list.pushToHead(2)}")
+//            Log.d(TAG, "pushToHead(3) : ${list.pushToHead(3)}")
+//            Log.d(TAG, "pushToHead(4) : ${list.pushToHead(4)}")
+//            Log.d(TAG, "pushToHead(5) : ${list.pushToHead(5)}")
+//            Log.d(TAG, "pushToHead(6) : ${list.pushToHead(6)}")
+//            Log.d(TAG, "pushToHead(7) : ${list.pushToHead(7)}")
+//            Log.d(TAG, "pushToHead(8) : ${list.pushToHead(8)}")
+//            Log.d(TAG, "pushToHead(9) : ${list.pushToHead(9)}")
 
 //            Log.d(TAG, "get(-1) : ${list.get(-1)}")
 //            Log.d(TAG, "get(100) : ${list.get(100)}")
@@ -161,10 +230,8 @@ class MainFragment : Fragment() {
 //            Log.d(TAG, list.toString())
 //            Log.d(TAG, "===========================================")
 
-            Log.d(TAG, list.toString())
-            Log.d(TAG, list.reverse()?.toString())
-
-            val x = 1
+//            Log.d(TAG, list.toString())
+//            Log.d(TAG, list.reverse()?.toString())
 
             //chapter 19
 //            val list = SingleLinkedList<String>()
