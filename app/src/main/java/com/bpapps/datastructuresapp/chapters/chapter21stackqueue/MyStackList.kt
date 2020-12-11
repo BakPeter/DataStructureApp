@@ -8,16 +8,18 @@ class MyStackList<T> {
     var size: Int = 0
         private set
 
-    fun pop(): Int {
+    fun pop(): T? {
         if (size != 0) {
             var temp = first
             first = first!!.next
             temp!!.next = null
 
             size--
+
+            return temp.data
         }
 
-        return size
+        return null
     }
 
     fun push(data: T): Int {

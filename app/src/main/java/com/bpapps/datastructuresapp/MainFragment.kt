@@ -6,8 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.bpapps.datastructuresapp.chapters.chapter22binarysearchtrees.BinarySearchTree
-import com.bpapps.datastructuresapp.chapters.chapter23treetraversal.TreeUtils
+import com.bpapps.datastructuresapp.chapters.chapter26graphs.MyGraph
 import kotlinx.android.synthetic.main.fragment_main.*
 
 // TODO: Rename parameter arguments, choose names that match
@@ -49,14 +48,63 @@ class MainFragment : Fragment() {
         btnRunFuncs.setOnClickListener {
             //===============================================================
             //===============================================================
-            //chapter22
-            val tree = TreeUtils<Int>()
-            tree.insert(10)
-            tree.insert(6)
-            tree.insert(15)
-            tree.insert(3)
-            tree.insert(8)
-            tree.insert(20)
+            //chapter26
+            val graph = MyGraph<String>()
+            graph.addVertex("A")
+            graph.addVertex("B")
+            graph.addVertex("C")
+            graph.addVertex("D")
+            graph.addVertex("E")
+            graph.addVertex("F")
+
+            graph.addEdge("A", "B")
+            graph.addEdge("A", "C")
+            graph.addEdge("B", "D")
+            graph.addEdge("C", "E")
+            graph.addEdge("D", "E")
+            graph.addEdge("D", "F")
+            graph.addEdge("E", "F")
+
+            Log.d(TAG, "graph.DFS() : ${graph.DFSRecursive()}")
+            Log.d(TAG, "graph.DFSIterative() : ${graph.DFSIterative()}")
+
+            val x = 0
+
+
+//            graph.addVertex("Tokyo")
+//            graph.addVertex("Tokyo")
+//            graph.addVertex("Dallas")
+//            graph.addVertex("Aspen")
+//            graph.addVertex("Hong Kong")
+//
+//            graph.addEdge("Tokyo", "Dallas")
+//            graph.addEdge("Hong Kong", "Tokyo")
+//            graph.addEdge("Hong Kong", "LA")
+//            graph.addEdge("Hong Kong", "Tokyo")
+//
+//            graph.removeVertex("Hong Kong")
+//            graph.removeEdge("Tokyo", "Dallas")
+//            graph.removeEdge("Tel Aviv", "Dallas")
+//            graph.removeEdge("Aspen", "Dallas")
+
+            //chapter24
+//            val heap = MaxBinaryHeap<Int>()
+//            Log.d(TAG, "heap.insert(41) : ${heap.insert(30)}")
+//            Log.d(TAG, "heap.insert(39) : ${heap.insert(39)}")
+//            Log.d(TAG, "heap.insert(33) : ${heap.insert(33)}")
+//            Log.d(TAG, "heap.insert(40) : ${heap.insert(40)}")
+//            Log.d(TAG, "heap.insert(27) : ${heap.insert(27)}")
+//            Log.d(TAG, "heap.insert(12) : ${heap.insert(12)}")
+//            Log.d(TAG, "heap.insert(55) : ${heap.insert(55)}")
+
+            //chapter22-23
+//            val tree = TreeUtils<Int>()
+//            tree.insert(10)
+//            tree.insert(6)
+//            tree.insert(15)
+//            tree.insert(3)
+//            tree.insert(8)
+//            tree.insert(20)
 
 //            Log.d(TAG, "${tree.find(10)}")
 //            Log.d(TAG, "${tree.find(6)}")
@@ -65,12 +113,11 @@ class MainFragment : Fragment() {
 //            Log.d(TAG, "${tree.find(8)}")
 //            Log.d(TAG, "${tree.find(20)}")
 
-            Log.d(TAG, "tree.BFS() : ${tree.BFS()}")
-            Log.d(TAG, "tree.DFSPreOrder() : ${tree.DFSPreOrder()}")
-            Log.d(TAG, "tree.DFSPostOrder() : ${tree.DFSPostOrder()}")
-            Log.d(TAG, "tree.DFSInOrder() : ${tree.DFSInOrder()}")
+//            Log.d(TAG, "tree.BFS() : ${tree.BFS()}")
+//            Log.d(TAG, "tree.DFSPreOrder() : ${tree.DFSPreOrder()}")
+//            Log.d(TAG, "tree.DFSPostOrder() : ${tree.DFSPostOrder()}")
+//            Log.d(TAG, "tree.DFSInOrder() : ${tree.DFSInOrder()}")
 
-            val x = 1
 
             //chapter 21
 //            val stack: MyStackList<String> = MyStackList()
