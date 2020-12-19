@@ -38,7 +38,6 @@ class MyGraph<V : Comparable<V>> {
         val retVal = arrayListOf<V>()
         val visited = LinkedHashMap<V, Boolean>()
 
-
         val start: V = adjacencyList.keys.iterator().next()
 
         DFSRecursionHelper(start, retVal, visited)

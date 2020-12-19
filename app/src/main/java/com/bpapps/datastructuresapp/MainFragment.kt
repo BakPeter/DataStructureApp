@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.bpapps.datastructuresapp.chapters.chapter26graphs.MyGraph
+import com.bpapps.datastructuresapp.chapters.chapter28.MyWeightedGraph
 import kotlinx.android.synthetic.main.fragment_main.*
 
 // TODO: Rename parameter arguments, choose names that match
@@ -48,29 +49,40 @@ class MainFragment : Fragment() {
         btnRunFuncs.setOnClickListener {
             //===============================================================
             //===============================================================
-            //chapter26
-            val graph = MyGraph<String>()
+            //chapter 28
+
+            val graph = MyWeightedGraph<String>()
             graph.addVertex("A")
             graph.addVertex("B")
             graph.addVertex("C")
-            graph.addVertex("D")
-            graph.addVertex("E")
-            graph.addVertex("F")
 
-            graph.addEdge("A", "B")
-            graph.addEdge("A", "C")
-            graph.addEdge("B", "D")
-            graph.addEdge("C", "E")
-            graph.addEdge("D", "E")
-            graph.addEdge("D", "F")
-            graph.addEdge("E", "F")
-
-            Log.d(TAG, "graph.DFS() : ${graph.DFSRecursive()}")
-            Log.d(TAG, "graph.DFSIterative() : ${graph.DFSIterative()}")
+            graph.addEdge("A", "B", 10)
+            graph.addEdge("A", "C", 5)
+            graph.addEdge("B", "C", 7)
 
             val x = 0
 
+            //chapter27
+//            val graph = MyGraph<String>()
+//            graph.addVertex("A")
+//            graph.addVertex("B")
+//            graph.addVertex("C")
+//            graph.addVertex("D")
+//            graph.addVertex("E")
+//            graph.addVertex("F")
+//
+//            graph.addEdge("A", "B")
+//            graph.addEdge("A", "C")
+//            graph.addEdge("B", "D")
+//            graph.addEdge("C", "E")
+//            graph.addEdge("D", "E")
+//            graph.addEdge("D", "F")
+//            graph.addEdge("E", "F")
+//
+//            Log.d(TAG, "graph.DFS() : ${graph.DFSRecursive()}")
+//            Log.d(TAG, "graph.DFSIterative() : ${graph.DFSIterative()}")
 
+            //chapter26
 //            graph.addVertex("Tokyo")
 //            graph.addVertex("Tokyo")
 //            graph.addVertex("Dallas")
